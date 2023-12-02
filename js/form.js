@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     formulario.addEventListener('submit', function (event) {
         event.preventDefault();
-
+    
         const dadosFormulario = {
             nome: document.getElementById('nome').value,
             idade: document.getElementById('idade').value,
@@ -16,13 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
             opiniao: document.getElementById('opiniao').value,
             dataEnvio: new Date().toLocaleString()
         };
-
+    
         listaDadosFormulario.push(dadosFormulario);
-
         localStorage.setItem('listaDadosFormulario', JSON.stringify(listaDadosFormulario));
-
         atualizarLista();
-    });
+        alert('Formulário enviado com sucesso! Você pode enviar mais de um formulário por sessão.');
+    });    
 
     function criarElementoBotao(index) {
         const botao = document.createElement('button');
@@ -52,11 +51,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function excluirItem(index) {
-        listaDadosFormulario.splice(index, 1);
-        localStorage.setItem('listaDadosFormulario', JSON.stringify(listaDadosFormulario));
-        atualizarLista();
+        const confirmacao = confirm('Deseja realmente excluir este item?');
+        
+        if (confirmacao) {
+            listaDadosFormulario.splice(index, 1);
+            localStorage.setItem('listaDadosFormulario', JSON.stringify(listaDadosFormulario));
+            atualizarLista();
+        }
     }
-
+    
     const botaoLimpar = document.getElementById('limpar-campos');
 
     if (botaoLimpar) {
