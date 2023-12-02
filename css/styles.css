@@ -1,0 +1,166 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+    background: linear-gradient(180deg, #99FF52 0%, rgba(7, 131, 1, 0.25) 99.97%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 480px) {
+    #cabecalho img {
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .conteudo img {
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-form {
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .fig-form {
+        display: none;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+.menu {
+    margin-left: 5.3%;
+}
+
+.logo {
+    width: 50%;
+    align-items: center;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+p {
+    margin-left: 8%;
+    margin-right: 8%;
+    text-align: justify;
+    line-height: 200%;
+    font-family: 'Times New Roman', serif;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.formulario {
+    margin-right: 20px;
+}
+
+.fig-form {
+    align-self: center;
+}
+
+#rodape {
+    position: absolute;
+    width: 100%;
+    background-color: #00A0FF;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    color: #292929;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 14px;
+}
+
+.inicio-rodape:active {
+    color: red;
+}
+
+.form-rodape:active {
+    color: red;
+}
+
+.btn-web {
+    background: none;
+    border: none;
+}
+
+.btn-insta {
+    background: none;
+    border: none;
+}
+
+.btn-youtube {
+    background: none;
+    border: none;
+}
+
+.btn-web:hover {
+    transform: scale(1.2);
+}
+
+.btn-insta:hover {
+    transform: scale(1.2);
+}
+
+.btn-youtube:hover {
+    transform: scale(1.2);
+}
+
+#botoes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 20px;
+    margin-top: 20px;
+    margin-right: 6%;
+    margin-bottom: 15px;
+}
+
+#lista-dados {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-bottom: 15px;
+}
